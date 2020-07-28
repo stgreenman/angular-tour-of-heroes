@@ -1,0 +1,45 @@
+<h2> My Heroes </h2>
+
+<!--
+<mat-selection-list #shoes [multiple]="false">
+    <mat-list-option *ngFor="let hero of heroes; index as position">
+        {{ hero.name }} {{ hero.id }}
+    </mat-list-option>
+  </mat-selection-list>
+-->
+
+<!--
+  <mat-list role="list">
+    <mat-list-item role="listitem" *ngFor="let hero of heroes; let i = index">
+      <mat-radio-button [value]="i" (change)="selection = $event.value">
+          {{hero.name}}
+      </mat-radio-button>
+    </mat-list-item>
+  </mat-list>
+-->
+
+<ul class="heroes">
+	<li *ngFor="let hero of heroes; let i=index" (click)="showDetails(i)">
+		<span class="badge"> {{hero.name}} </span>
+    {{hero.id}}
+	</li>
+</ul> 
+
+
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+
+
+
+
+<!-- <h2> {{ hero.name | uppercase }} Details </h2>
+<h3> Name: {{ hero.name }} </h3>
+<h3> ID: {{ hero.id }} </h3> -->
+
+<!-- Option selected {{ shoes.selectedOptions.selected.length }} -->
+
+<!-- <div>
+    <label>
+        Name:
+        <input [(ngModel)]= "hero.name" placeholder="name" />
+    </label>
+</div> -->
