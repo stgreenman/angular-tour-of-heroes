@@ -1,0 +1,4 @@
+<h1> Messages </h1>
+
+<button (click)="messageService.clear()"> clear </button>
+<h3 *ngFor="let message of messageService.messages">{{message}}</h3>
