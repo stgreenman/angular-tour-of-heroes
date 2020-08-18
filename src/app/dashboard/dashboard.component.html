@@ -1,0 +1,15 @@
+<p>dashboard works!</p>
+
+
+<ul class="grid grid-pad">
+	
+	<li *ngFor="let hero of topHeroes; let i=index" class="col-1-4">
+		<a routerLink='/details/{{hero.id}}'>
+			<div class="module hero">
+				<h4>{{hero.name}}</h4>
+		  </div>
+		</a>
+		
+	</li>
+</ul>
+`

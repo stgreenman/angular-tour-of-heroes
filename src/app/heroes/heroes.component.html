@@ -19,15 +19,17 @@
 -->
 
 <ul class="heroes">
-	<li *ngFor="let hero of heroes; let i=index" (click)="showDetails(i)">
-		<span class="badge"> {{hero.name}} </span>
+	<li *ngFor="let hero of heroes; let i=index"> <!-- (click)="showDetails(i)">-->
+    <a routerLink='/details/{{hero.id}}'>
+      <span class="badge"> {{hero.name}} </span>
+    </a>
     {{hero.id}}
 	</li>
 </ul> 
 
 
 <app-hero-detail [hero]="selectedHero"></app-hero-detail>
-<app-message></app-message>
+
 
 
 

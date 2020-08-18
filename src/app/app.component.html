@@ -1,9 +1,22 @@
 <h1> 
   {{title}}
 </h1>
+<nav>
+	<div> <a routerLink="/heroes">Heroes</a>  </div>
+	<!--<div><a routerLink="/messages">Messages</a></div>-->
+	<div><a routerLink="/dashboard">Dashboard</a></div>
+</nav>
 
 
-<app-heroes></app-heroes>
+<router-outlet></router-outlet>
+<pre> </pre>
+<pre> </pre>
+
+<app-message></app-message>
+
+
+
+<!-- <app-heroes></app-heroes> -->
 
 <!--
 <mat-list role="list">
